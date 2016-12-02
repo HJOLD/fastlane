@@ -93,7 +93,7 @@ module Gym
     # Builds the app and prepares the archive
     def build_app
       command = BuildCommandGenerator.generate
-      print_command(command, "Generated Build Command") if $verbose
+      print_command(command, "Generated Build Command") if FastlaneCore::Globals.verbose?
       FastlaneCore::CommandExecutor.execute(command: command,
                                           print_all: true,
                                       print_command: !Gym.config[:silent],
@@ -116,7 +116,7 @@ module Gym
 
     def package_app
       command = PackageCommandGenerator.generate
-      print_command(command, "Generated Package Command") if $verbose
+      print_command(command, "Generated Package Command") if FastlaneCore::Globals.verbose?
 
       FastlaneCore::CommandExecutor.execute(command: command,
                                           print_all: false,
