@@ -126,10 +126,6 @@ If you run into any issues, use the `verbose` mode to get more information
 
     gym --verbose
 
-In general, if you run into issues while exporting the archive, try using:
-
-    gym --use_legacy_build_api
-
 Set the right export method if you're not uploading to App Store or TestFlight:
 
     gym --export_method ad-hoc
